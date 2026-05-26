@@ -1,0 +1,4 @@
+{"query":"refund window?","retrieved":[{"id":"doc-12","source":"policies/refunds.md","score":0.91},{"id":"doc-7","source":"policies/returns.md","score":0.6}],"citations":["doc-12","doc-7"]}
+{"query":"refund on sale items?","retrieved":[{"id":"doc-12","source":"policies/refunds.md","score":0.88},{"id":"doc-3","source":"faq/sales.md","score":0.5}],"citations":["doc-12"]}
+{"query":"student discount?","retrieved":[{"id":"doc-22","source":"pricing/tiers.md","score":0.77}],"citations":["doc-22","doc-99"]}
+{"query":"how to cancel?","retrieved":[{"id":"doc-7","source":"policies/returns.md","score":0.7},{"id":"doc-30","source":"faq/cancel.md","score":0.65}],"citations":["doc-7","doc-30"]}

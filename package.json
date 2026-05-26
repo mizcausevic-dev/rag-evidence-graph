@@ -1,0 +1,62 @@
+{
+  "name": "rag-evidence-graph",
+  "version": "0.1.0",
+  "description": "Build a corpus-level citation/evidence graph from RAG interactions — most-cited docs, co-citation edges, and phantom (cited-but-never-retrieved) nodes. JSON-graph, Graphviz DOT, and summary output.",
+  "type": "module",
+  "license": "AGPL-3.0-or-later",
+  "author": "mizcausevic-dev",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mizcausevic-dev/rag-evidence-graph"
+  },
+  "keywords": [
+    "rag",
+    "llm",
+    "evidence",
+    "knowledge-graph",
+    "citations",
+    "graph",
+    "graphviz",
+    "observability",
+    "hallucination"
+  ],
+  "bin": {
+    "rag-evidence-graph": "dist/cli.js"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "coverage": "vitest run --coverage",
+    "demo": "tsx src/cli.ts fixtures/records.jsonl --format summary",
+    "graph": "tsx src/cli.ts",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.17.0",
+    "@types/node": "^22.10.0",
+    "@vitest/coverage-v8": "^2.1.8",
+    "eslint": "^9.17.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.18.0",
+    "vitest": "^2.1.8"
+  }
+}
